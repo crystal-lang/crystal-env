@@ -2,11 +2,15 @@ require "./version"
 
 module Crystal
   struct Env
+    class InvalidEnvironmentError < Exception
+    end
+
     # :nodoc:
     macro default(value)
       module Crystal
         {% if !Env.has_constant?(:DEFAULT) %}
           struct Env
+            # :nodoc:
             DEFAULT = {{value}}
           end
         {% end %}
@@ -14,11 +18,16 @@ module Crystal
     end
 
     # :nodoc:
+    OPTIONS = %w(test development production)
+
+    # :nodoc:
     def initialize
     end
 
     def name : String
-      ENV.fetch("CRYSTAL_ENV", Crystal::Env::DEFAULT)
+      name = ENV.fetch("CRYSTAL_ENV", Crystal::Env::DEFAULT)
+      raise InvalidEnvironmentError.new("Invalid environment name: #{name}") unless OPTIONS.includes?(name)
+      name
     end
 
     def test? : Bool
