@@ -36,6 +36,10 @@ require "../your-app"
   * `Crystal.env.production?`
   * `Crystal.env.test?`
 
+* Use the following method to get name the environment
+
+  * `Crystal.env.name`
+
 * Set `CRYSTAL_ENV` to `development`, `production` or `test`
 
 

@@ -17,8 +17,7 @@ module Crystal
     def initialize
     end
 
-    # :nodoc:
-    def name
+    def name : String
       ENV.fetch("CRYSTAL_ENV", Crystal::Env::DEFAULT)
     end
 
