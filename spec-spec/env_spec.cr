@@ -1,6 +1,6 @@
 require "spec"
-require "../env/spec"
-require "../env"
+require "../src/crystal-env/spec"
+require "../src/crystal-env"
 
 describe Crystal::Env do
   it "returns test by default" do

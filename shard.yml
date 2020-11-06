@@ -1,9 +1,9 @@
-name: env
+name: crystal-env
 version: 0.1.0
 
 authors:
   - Brian J. Cardiff <bcardiff@gmail.com>
 
-crystal: 0.23.1
+crystal: 0.35.1
 
 license: MIT
