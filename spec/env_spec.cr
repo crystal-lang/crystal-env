@@ -1,5 +1,5 @@
 require "spec"
-require "../env"
+require "../src/crystal-env"
 
 describe Crystal::Env do
   it "returns development by default" do
