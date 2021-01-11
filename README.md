@@ -8,7 +8,7 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  env:
+  crystal-env:
     github: crystal-lang/crystal-env
 ```
 
@@ -18,15 +18,15 @@ dependencies:
 The default environment will be `development`.
 
 ```crystal
-require "env"
+require "crystal-env"
 ```
 
-* In the `spec/spec_helper.cr` require `env/spec` **before** your app code.
+* In the `spec/spec_helper.cr` require `crystal-env/spec` **before** your app code.
 When running `crystal spec` the default environment will be `test`.
 
 ```crystal
 require "spec"
-require "env/spec"
+require "crystal-env/spec"
 require "../your-app"
 ```
 
