@@ -1,5 +1,7 @@
 # crystal-env
 
+[![CI](https://github.com/crystal-lang/crystal-env/workflows/CI/badge.svg)](https://github.com/crystal-lang/crystal-env/actions)
+
 This shard provides environment detection. The selected environment is configured using `CRYSTAL_ENV` environment variable.
 
 ## Installation
